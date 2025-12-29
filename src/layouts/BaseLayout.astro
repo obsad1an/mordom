@@ -1,0 +1,70 @@
+---
+import "../styles/global.css";
+const { title = "Mordom Death Cult" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <img
+        src="/logo-white.png"
+        alt="Mordom Logo"
+        class="site-logo fade-ritual"
+      />
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/discography">Discography</a>
+        <a href="/manifesto">Manifesto</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="footer-separator"></div>
+
+      <div class="footer-icons">
+        <!-- MAIL -->
+        <a href="mailto:ritual@yourband.com" aria-label="Email"> ✉ </a>
+
+        <!-- INSTAGRAM -->
+        <a
+          href="https://www.instagram.com/mordomdeathcult"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="18" cy="6" r="1"></circle>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-text">
+        <p>Mordom</p>
+        <p>MMXXVI</p>
+      </div>
+    </footer>
+  </body>
+</html>
